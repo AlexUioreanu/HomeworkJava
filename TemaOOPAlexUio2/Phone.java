@@ -1,7 +1,7 @@
 package TemaOOPAlexUio2;
 
 public interface Phone {
-    void addContact(Contact contact);
+    void addContact(int id, int phoneNumber, String firstName, String lastName);
     void listContacts();
     void sendMessage(int phoneNumber, String msg);
     void listMessages(int phoneNumber);
