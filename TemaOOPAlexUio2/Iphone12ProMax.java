@@ -13,9 +13,10 @@ public class Iphone12ProMax extends Iphone {
     }
 
     @Override
-    public void addContact(Contact contact) {
+    public void addContact(int id, int phoneNumber, String firstName, String lastName) {
         if (isOn() == true) {
             if (getBatteryLife() > 0) {
+                Contact contact = new Contact(id, phoneNumber, firstName, lastName);
                 listContacts = ArrayUtils.add(listContacts, contact);
             } else {
                 System.out.println("You must to charge your " + getName());
