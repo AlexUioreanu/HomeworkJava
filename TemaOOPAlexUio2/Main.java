@@ -4,14 +4,11 @@ public class Main {
     public static void main(String[] args) {
 
         //SamsungGalaxyS6
-        Contact contact1 = new Contact(1, 11, "Vasile", "Pop");
-        Contact contact2 = new Contact(2, 12, "Ion", "Pop");
-
         Phone firstPhone = new SamsungGalaxyS6("SamsungGalaxyS6", "Black", "Metal", 123123);
         firstPhone.turnOn();
 
-        firstPhone.addContact(contact1);
-        firstPhone.addContact(contact2);
+        firstPhone.addContact(1, 11, "Vasile", "Pop");
+        firstPhone.addContact(2, 12, "Ion", "Pop");
         firstPhone.listContacts();
 
         firstPhone.sendMessage(11, "Nu mai bea Vasile");
@@ -33,13 +30,10 @@ public class Main {
         firstPhone.turnOff();
 
         //SamsungGalaxyS21
-        Contact contact3 = new Contact(1, 13, "Vasilica", "Pop");
-        Contact contact4 = new Contact(2, 14, "Ioana", "Pop");
-
         Phone secondPhone = new SamsungGalaxyS21("SamsungGalaxyS21", "Blue", "Metal", 9573243);
 
-        secondPhone.addContact(contact3);
-        secondPhone.addContact(contact4);
+        secondPhone.addContact(1, 13, "Vasilica", "Pop");
+        secondPhone.addContact(2, 14, "Ioana", "Pop");
         secondPhone.listContacts();
 
         secondPhone.sendMessage(13, "Nu mai bea Vasilica");
@@ -56,14 +50,11 @@ public class Main {
         secondPhone.viewBattery();
 
         //IphoneX
-        Contact contact5 = new Contact(1, 15, "Alex", "Pop");
-        Contact contact6 = new Contact(2, 16, "Maria", "Pop");
-
         Phone thirdPhone = new IphoneX("IphoneX", "Brown", "Metal", 231124);
         thirdPhone.turnOn();
 
-        thirdPhone.addContact(contact5);
-        thirdPhone.addContact(contact6);
+        thirdPhone.addContact(1, 15, "Alex", "Pop");
+        thirdPhone.addContact(2, 16, "Maria", "Pop");
         thirdPhone.listContacts();
 
         thirdPhone.sendMessage(15, "Nu mai bea Alex");
@@ -82,14 +73,11 @@ public class Main {
         thirdPhone.turnOff();
 
         //Iphone12ProMax
-        Contact contact7 = new Contact(1, 17, "Alexandra", "Pop");
-        Contact contact8 = new Contact(2, 18, "Marioara", "Pop");
-
         Phone fourthPhone = new Iphone12ProMax("Iphone12ProMax", "Pink", "Metal", 233211124);
         fourthPhone.turnOn();
 
-        fourthPhone.addContact(contact7);
-        fourthPhone.addContact(contact8);
+        fourthPhone.addContact(1, 17, "Alexandra", "Pop");
+        fourthPhone.addContact(2, 18, "Marioara", "Pop");
         fourthPhone.listContacts();
 
         fourthPhone.sendMessage(17, "Da de mancare la animale Ale !");
