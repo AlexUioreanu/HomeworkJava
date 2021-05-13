@@ -4,20 +4,13 @@ import java.util.Arrays;
 
 public class Algo {
 
-    public SalesRepresentative[] sort(SalesRepresentative[] reps) {
-        for (int a = 1; a < reps.length; a++) {
-            boolean isSorted = true;
-            for (int b = 0; b < reps.length - a; b++) {
-                if (reps[b].getRevenue() < reps[b + 1].getRevenue()) {
-                    SalesRepresentative temp = reps[b];
-                    reps[b] = reps[b + 1];
-                    reps[b + 1] = temp;
-                    isSorted = false;
-                }
-                if (isSorted)
-                    return reps;
+    public SalesRepresentative[] sort(SalesRepresentative[] representatives){
+        Arrays.sort(representatives, new Comparator<SalesRepresentative>() {
+            @Override
+            public int compare(SalesRepresentative o1, SalesRepresentative o2) {
+                return o2.getRevenue()- o1.getRevenue();
             }
-        }
-        return reps;
+        });
+        return representatives;
     }
 }
