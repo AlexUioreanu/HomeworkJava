@@ -2,16 +2,35 @@ package TemaOOPAlexUio2;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * Class that has specific properties, contains the list of contacts, extends a general class(Iphone) and implements the Phone methods
+ */
 public class SamsungGalaxyS6 extends Samsung {
     final private int IMEI;
     private Contact[] listContacts;
 
+    /**
+     * Contructor that contains even the list of the contacts
+     *
+     * @param name     contains the name of the phone
+     * @param color    contains the color of the phone
+     * @param material contains the material of the phone
+     * @param IMEI     contains the imei of the phone
+     */
     public SamsungGalaxyS6(String name, String color, String material, int IMEI) {
         super(name, color, material);
         this.IMEI = IMEI;
         listContacts = new Contact[0];
     }
 
+    /**
+     * Method that adds a contact in a list
+     *
+     * @param id          contains the id of the contact
+     * @param phoneNumber contains the phone number of the contact
+     * @param firstName   contains the first name of the contact
+     * @param lastName    contains the last name of the contact
+     */
     @Override
     public void addContact(int id, int phoneNumber, String firstName, String lastName) {
         if (isOn() == true) {
@@ -26,6 +45,9 @@ public class SamsungGalaxyS6 extends Samsung {
         }
     }
 
+    /**
+     * Method that display the list of contacts
+     */
     @Override
     public void listContacts() {
         if (isOn() == true) {
@@ -41,6 +63,12 @@ public class SamsungGalaxyS6 extends Samsung {
         }
     }
 
+    /**
+     * Method that adds a message to a specific number in the list
+     *
+     * @param phoneNumber contains the phone number that you write
+     * @param msg         contains the meesage that you add in the list to that specific phone number
+     */
     @Override
     public void sendMessage(int phoneNumber, String msg) {
         if (isOn() == true) {
@@ -62,6 +90,11 @@ public class SamsungGalaxyS6 extends Samsung {
         }
     }
 
+    /**
+     * Method that  display the list of message from a specific phone number
+     *
+     * @param phoneNumber contains that phone number that you add
+     */
     @Override
     public void listMessages(int phoneNumber) {
         if (isOn() == true) {
@@ -81,6 +114,11 @@ public class SamsungGalaxyS6 extends Samsung {
         }
     }
 
+    /**
+     * Method that calls a specific number from a list of contacts
+     *
+     * @param phoneNumber contain the phone number
+     */
     @Override
     public void call(int phoneNumber) {
         if (isOn() == true) {
@@ -101,6 +139,9 @@ public class SamsungGalaxyS6 extends Samsung {
         }
     }
 
+    /**
+     * Method that displays the list of calls
+     */
     @Override
     public void callHistory() {
         if (isOn() == true) {
@@ -118,6 +159,9 @@ public class SamsungGalaxyS6 extends Samsung {
         }
     }
 
+    /**
+     * Method that displays the battery
+     */
     @Override
     public void viewBattery() {
         if (isOn() == true) {
@@ -131,6 +175,11 @@ public class SamsungGalaxyS6 extends Samsung {
         }
     }
 
+    /**
+     * Method that charges the phone in hours
+     *
+     * @param chargedHours contains the number of hours
+     */
     @Override
     public void charge(int chargedHours) {
         if (getBatteryLife() <= 10 && getBatteryLife() >= 0) {
@@ -143,7 +192,9 @@ public class SamsungGalaxyS6 extends Samsung {
         }
     }
 
-
+    /**
+     * Method that turns on the phone, without which it cannot work
+     */
     @Override
     public void turnOn() {
         if (getBatteryLife() > 0) {
@@ -154,6 +205,9 @@ public class SamsungGalaxyS6 extends Samsung {
         }
     }
 
+    /**
+     * Method that turns off the phone, which disables all the functions
+     */
     @Override
     public void turnOff() {
         setOn(false);
