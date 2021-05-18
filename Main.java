@@ -6,13 +6,17 @@ import java.util.Arrays;
 
 public class Main extends Algo {
     public static void main(String[] args) {
-
+        
+        //A list that contains all the sellers
         SalesRepresentative[] reps = getSalesRepresentatives();
-
-        Algo sort = new Algo();
-
-        SalesRepresentative[] sortedReps = sort.sort(reps);
-
+        
+        //An object created to use the non-static methods
+        Algo sorted = new Algo();
+        
+        //A new list of SaleRepresentative that contains the last list sorted 
+        SalesRepresentative[] sortedReps = sorted.sort(reps);
+        
+        // Displaying the sorted list
         System.out.println(Arrays.toString(sortedReps));
     }
     
