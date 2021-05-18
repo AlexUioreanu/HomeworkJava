@@ -16,6 +16,10 @@ public class Main extends Algo {
         System.out.println(Arrays.toString(sortedReps));
     }
     
+     /**
+     * Method that creates the list of  sellers
+     * @return the list of sellers
+     */
     public static SalesRepresentative[] getSalesRepresentatives() {
         SalesRepresentative guy1 = new SalesRepresentative(10, 700);
         SalesRepresentative guy2 = new SalesRepresentative(7, 800);
