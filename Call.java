@@ -4,17 +4,17 @@ package TemaOOPAlexUio2;
  * Class that contains the call number
  */
 public class Call {
-    private int phoneNumber;
+    private long phoneNumber;
     
     /**
      * Contructor
      * @param phoneNumber the number that a contact has
      */
-    public Call(int phoneNumber) {
+    public Call(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 }
