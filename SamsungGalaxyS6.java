@@ -15,11 +15,11 @@ public class SamsungGalaxyS6 extends Samsung {
      * @param name     contains the name of the phone
      * @param color    contains the color of the phone
      * @param material contains the material of the phone
-     * @param IMEI     contains the imei of the phone
+     * @param imei     contains the imei of the phone
      */
-    public SamsungGalaxyS6(String name, String color, String material, int IMEI) {
+    public SamsungGalaxyS6(String name, String color, String material, int imei) {
         super(name, color, material);
-        this.IMEI = IMEI;
+        this.IMEI = imei;
         listContacts = new Contact[0];
     }
 
