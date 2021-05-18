@@ -4,29 +4,42 @@ public class Main {
     public static void main(String[] args) {
 
         //SamsungGalaxyS6
+
+        //creates the phone
         Phone firstPhone = new SamsungGalaxyS6("SamsungGalaxyS6", "Black", "Metal", 123123);
+        // turns ON the phone
         firstPhone.turnOn();
 
+        // adds contacts
         firstPhone.addContact(1, 11, "Vasile", "Pop");
         firstPhone.addContact(2, 12, "Ion", "Pop");
+        //displays all the contacts from this phone
         firstPhone.listContacts();
 
+        //sends a message to that phone number
         firstPhone.sendMessage(11, "Nu mai bea Vasile");
+        // display all the messages from that specific phone number
         firstPhone.listMessages(11);
 
+        //sends more messages
         firstPhone.sendMessage(12, "Hai acasa Ioane!");
         firstPhone.sendMessage(12, "Hai Ioane!");
         firstPhone.listMessages(12);
 
+        //call that specific phone number
         firstPhone.call(11);
         firstPhone.call(12);
         firstPhone.call(12);
+        //display all the calls history
         firstPhone.callHistory();
 
+        //sees the battery level
         firstPhone.viewBattery();
+        // charges the phone
         firstPhone.charge(10);
         firstPhone.viewBattery();
 
+        //turns OFF the phone
         firstPhone.turnOff();
 
         //SamsungGalaxyS21
