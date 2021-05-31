@@ -1,14 +1,18 @@
 package TemaFunctions1AlexUio;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
         //A list that contains all the sellers
         SalesRepresentative[] reps = reps();
         //An object created to use the non-static methods
-        Main bubbleSort = new Main();
+        Main bubble = new Main();
         //A new list of SaleRepresentative that contains the last list sorted
-        SalesRepresentative[] sortedReps = bubbleSort.sort(reps);
+        SalesRepresentative[] sortedReps = bubble.sort(reps);
+        System.out.println(Arrays.toString(sortedReps));
+
 
     }
 
@@ -36,26 +40,23 @@ public class Main {
      * @return the new list sorted
      */
     public SalesRepresentative[] sort(SalesRepresentative[] reps) {
-        int swap = 0;
-        do {
-            swap = 0;
-            for (int i = 0; i < reps.length - 1; i++) {
-                SalesRepresentative tmp = reps[i];
+        boolean swap = true;
+        while (swap) {
+            swap = false;
+            for (int i = 1; i < reps.length; i++) {
                 int revenue = reps[i].getRevenue();
-                int revenuePlus = reps[i + 1].getRevenue();
-                if (revenue < revenuePlus) {
-                    reps[i] = reps[i + 1];
-                    reps[i + 1] = tmp;
-                    swap++;
+                int revenueMinus = reps[i - 1].getRevenue();
+                if (revenue > revenueMinus) {
+                    SalesRepresentative tmp = reps[i];
+                    reps[i] = reps[i - 1];
+                    reps[i - 1] = tmp;
+                    swap = true;
                 }
             }
-        } while (swap > 0);
-        System.out.print("\nSorted: ");
-        for (int i = 0; i < reps.length; i++)
-            System.out.print("\n" + reps[i]);
-
+        }
         return reps;
     }
 }
+
 
 
