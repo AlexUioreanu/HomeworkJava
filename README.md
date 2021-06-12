@@ -1,3 +1,0 @@
-# HomeworkJava
-Projects
-Phone project!
