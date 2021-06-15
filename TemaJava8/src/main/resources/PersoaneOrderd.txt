@@ -1,0 +1,1 @@
+[Persoane{firstName='A', lastName='B', dateBirth='28-03-1977}, Persoane{firstName='Gdrian', lastName='Burnar', dateBirth='28-03-1972}, Persoane{firstName='N', lastName='Y', dateBirth='28-03-1971}, Persoane{firstName='S', lastName='G', dateBirth='13-03-1973}]
